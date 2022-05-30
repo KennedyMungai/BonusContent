@@ -1,0 +1,70 @@
+@{
+    @ViewData["Title"] = "Chat";
+}
+<div class="container">
+    <h1>@ViewData["Title"]</h1>
+    <div class="row">
+        <div class="col-12">
+            <h2>Register</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4">My Name</div>
+        <div class="col-8"><input type="text" name="" id="from"></div>
+    </div>
+    <div class="row">
+        <div class="col-4">My Groups</div>
+        <div class="col-8"><input type="text" name="" id="groups" value="Sales,IT"></div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <input type="button" value="Register" id="registerButton">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <h2>Message</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4">To type</div>
+        <div class="col-8">
+            <select name="" id="toType">
+                <option selected value="">Everyone</option>
+                <option value="">Group</option>
+                <option value="">User</option>
+            </select>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4">To</div>
+        <div class="col-8"><input type="text" name="" id="to"></div>
+    </div>
+    <div class="row">
+        <div class="col-4">Body</div>
+        <div class="col-8"><input type="text" name="" id="body"></div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <input type="button" value="Send" id="sendButton">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <hr>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <h2>Messages Received</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <ul id="messages"></ul>
+        </div>
+    </div>
+</div>
+
+<script src="~/js/signalr/dist/browser/signalr.js"></script>
+<script src="~/js/chat.js"></script>
